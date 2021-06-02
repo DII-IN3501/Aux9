@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    {% bootstrap_messages %}
+</head>
+<body>
+<div class="container">
+    <form action="{% url 'auth' %}" method="POST">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+</body>
+</html>
+

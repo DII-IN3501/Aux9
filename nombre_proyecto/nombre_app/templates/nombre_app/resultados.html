@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Bienvenid@ {{fname}}</h1>
+
+    <h2>Hola, {{fname}} {{lname}}</h2>
+
+    Al parecer hoy tienes:
+
+    {% for i in needs %}
+        {{i}},
+    {% endfor %}
+
+    <br>
+    Además, {{nota}} quieres un 7.
+
+    <h1>Usuario creado</h1>
+
+    <h2> Nombre de usuario: {{username}}</h2>
+   
+    <br><a href="{% url 'index' %}">Página de inicio</a>
+</body>
+</html>
